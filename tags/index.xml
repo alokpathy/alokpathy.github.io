@@ -21,42 +21,6 @@
     </item>
     
     <item>
-      <title>Accelerators</title>
-      <link>/tags/accelerators/</link>
-      <pubDate>Thu, 15 Apr 2021 10:00:00 -0350</pubDate>
-      
-      <guid>/tags/accelerators/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hash Tables</title>
-      <link>/tags/hash-tables/</link>
-      <pubDate>Thu, 15 Apr 2021 10:00:00 -0350</pubDate>
-      
-      <guid>/tags/hash-tables/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Graph Neural Networks</title>
-      <link>/tags/graph-neural-networks/</link>
-      <pubDate>Wed, 14 Apr 2021 10:00:00 -0350</pubDate>
-      
-      <guid>/tags/graph-neural-networks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Graph-Representation Learning</title>
-      <link>/tags/graph-representation-learning/</link>
-      <pubDate>Wed, 14 Apr 2021 10:00:00 -0350</pubDate>
-      
-      <guid>/tags/graph-representation-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>GPU Data Structure</title>
       <link>/tags/gpu-data-structure/</link>
       <pubDate>Tue, 09 Mar 2021 14:43:34 -0400</pubDate>
@@ -68,9 +32,18 @@
     <item>
       <title>Graph Analytics</title>
       <link>/tags/graph-analytics/</link>
-      <pubDate>Thu, 10 Dec 2020 15:00:00 -0350</pubDate>
+      <pubDate>Thu, 05 Nov 2020 10:38:16 -0400</pubDate>
       
       <guid>/tags/graph-analytics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graph-Representation Learning</title>
+      <link>/tags/graph-representation-learning/</link>
+      <pubDate>Sat, 09 May 2020 14:43:34 -0400</pubDate>
+      
+      <guid>/tags/graph-representation-learning/</guid>
       <description></description>
     </item>
     

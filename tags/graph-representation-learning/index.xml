@@ -6,28 +6,10 @@
     <description>Recent content in Graph-Representation Learning on Alok Tripathy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Apr 2021 10:00:00 -0350</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2020 14:43:34 -0400</lastBuildDate>
     
 	<atom:link href="/tags/graph-representation-learning/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Reducing Communication in Graph Neural Network Training</title>
-      <link>/talk/2021-gtc-gnn/</link>
-      <pubDate>Wed, 14 Apr 2021 10:00:00 -0350</pubDate>
-      
-      <guid>/talk/2021-gtc-gnn/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reducing Communication in Graph Neural Network Training</title>
-      <link>/talk/2020-sc/</link>
-      <pubDate>Wed, 18 Nov 2020 15:00:00 -0350</pubDate>
-      
-      <guid>/talk/2020-sc/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Reducing Communication in Graph Neural Network Training</title>

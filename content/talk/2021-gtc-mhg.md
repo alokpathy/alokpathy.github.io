@@ -1,7 +1,7 @@
 +++
 title = "Multi-GPU HashGraph: A Scalable Hash Table for NUMA Systems"
 date = 2021-04-15T10:00:00-03:50
-draft = false
+draft = true
 
 # Tags and categories
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.

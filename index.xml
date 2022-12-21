@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Alok Tripathy on Alok Tripathy</title>
@@ -9,47 +10,74 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Publications</title>
-      <link>/publication/</link>
+      <title>Distributed-Memory Parallel Algorithms for Sparse Times Tall-Skinny-Dense Matrix Multiplication</title>
+      <link>/publication/2021-ics-dspmm/</link>
       <pubDate>Wed, 09 Jun 2021 14:43:34 -0400</pubDate>
       
-      <guid>/publication/</guid>
+      <guid>/publication/2021-ics-dspmm/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Recent &amp; Upcoming Talks</title>
-      <link>/talk/</link>
-      <pubDate>Thu, 15 Apr 2021 10:00:00 -0350</pubDate>
+      <title>Scalable Hash Table for NUMA Systems</title>
+      <link>/publication/2021-arxiv-mhg/</link>
+      <pubDate>Tue, 09 Mar 2021 14:43:34 -0400</pubDate>
       
-      <guid>/talk/</guid>
+      <guid>/publication/2021-arxiv-mhg/</guid>
       <description></description>
     </item>
     
     <item>
-      <title></title>
-      <link></link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Accurately and Efficiently Estimating Dynamic Point-to-Point Shortest Path</title>
+      <link>/publication/2020-biggraphs-ppsp/</link>
+      <pubDate>Thu, 05 Nov 2020 10:38:16 -0400</pubDate>
       
-      <guid></guid>
+      <guid>/publication/2020-biggraphs-ppsp/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Authors</title>
-      <link>/author/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Reducing Communication in Graph Neural Network Training</title>
+      <link>/publication/2020-sc-gnn/</link>
+      <pubDate>Sat, 09 May 2020 14:43:34 -0400</pubDate>
       
-      <guid>/author/</guid>
+      <guid>/publication/2020-sc-gnn/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Posts</title>
-      <link>/post/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Improving Scheduling for Irregular Applications with Logarithmic Radix Binning</title>
+      <link>/publication/2019-hpec-lrb/</link>
+      <pubDate>Wed, 25 Sep 2019 14:43:34 -0400</pubDate>
       
-      <guid>/post/</guid>
+      <guid>/publication/2019-hpec-lrb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scalable K-Core Decomposition for Static Graphs Using a Dynamic Graph Data Structure</title>
+      <link>/publication/2018-bigdata-kcore/</link>
+      <pubDate>Thu, 13 Dec 2018 10:38:16 -0400</pubDate>
+      
+      <guid>/publication/2018-bigdata-kcore/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Logarithmic Radix Binning and Vectorized Triangle Counting</title>
+      <link>/publication/2018-hpec-lrb/</link>
+      <pubDate>Tue, 25 Sep 2018 14:43:34 -0400</pubDate>
+      
+      <guid>/publication/2018-hpec-lrb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scaling Betweenness Centrality in Dynamic Graphs</title>
+      <link>/publication/2018-hpec-sbc/</link>
+      <pubDate>Tue, 25 Sep 2018 14:43:34 -0400</pubDate>
+      
+      <guid>/publication/2018-hpec-sbc/</guid>
       <description></description>
     </item>
     

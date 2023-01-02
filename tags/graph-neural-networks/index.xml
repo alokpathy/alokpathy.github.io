@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recent &amp; Upcoming Talks on Alok Tripathy</title>
-    <link>/talk/</link>
-    <description>Recent content in Recent &amp; Upcoming Talks on Alok Tripathy</description>
+    <title>Graph Neural Networks on Alok Tripathy</title>
+    <link>/tags/graph-neural-networks/</link>
+    <description>Recent content in Graph Neural Networks on Alok Tripathy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Feb 2023 15:00:00 -0350</lastBuildDate>
     
-	<atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/graph-neural-networks/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

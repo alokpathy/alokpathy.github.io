@@ -6,8 +6,17 @@
     <description>Recent content in Alok Tripathy on Alok Tripathy</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Jun 2021 14:43:34 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 26 Feb 2023 15:00:00 -0350</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Reducing Communication in Graph Neural Network Training</title>
+      <link>/talk/2023-cse-gnn/</link>
+      <pubDate>Sun, 26 Feb 2023 15:00:00 -0350</pubDate>
+      
+      <guid>/talk/2023-cse-gnn/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Distributed-Memory Parallel Algorithms for Sparse Times Tall-Skinny-Dense Matrix Multiplication</title>

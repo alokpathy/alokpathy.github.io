@@ -24,8 +24,13 @@ date_format = "Jan 2006"
 
 [[item]]
   title = "\"Communication-Avoiding Algorithms for Full-Batch and Mini-Batch GNN Training\" accepted to [NVIDIA GTC 24](https://www.nvidia.com/gtc/)"
-  date_start = "2024-03-21"
+  date_start = "2024-02-04"
   description = ""
+
+[[item]]
+  title = "TA'd for [JamCoders](https://jamcoders.org.jm/) 2023"
+  date_start = "2023-06-30"
+  description = "This is an phenomenal experience. For anybody interested in teaching CS or algorithms, I strongly recommend applying."
 
 # [[item]]
 #   title = "Presenting \"Reducing Communication in Graph Neural Network Training\" at [SIAM CSE'23](https://www.siam.org/conferences/cm/conference/cse23)"

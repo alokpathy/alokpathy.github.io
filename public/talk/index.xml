@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recent &amp; Upcoming Talks on Alok Tripathy</title>
+    <link>/talk/</link>
+    <description>Recent content in Recent &amp; Upcoming Talks on Alok Tripathy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Mar 2024 09:45:00 -1015</lastBuildDate>
+    
+	<atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Communication-Avoiding Algorithms for Full-Batch and Mini-Batch GNN Training</title>
+      <link>/talk/2023-gtc-distsamp/</link>
+      <pubDate>Thu, 21 Mar 2024 09:45:00 -1015</pubDate>
+      
+      <guid>/talk/2023-gtc-distsamp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Communication-Avoiding Algorithms for Full-Batch and Mini-Batch GNN Training</title>
+      <link>/talk/2023-pp-distsamp/</link>
+      <pubDate>Tue, 05 Mar 2024 13:00:00 -1325</pubDate>
+      
+      <guid>/talk/2023-pp-distsamp/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

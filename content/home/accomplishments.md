@@ -30,7 +30,7 @@ date_format = "Jan 2006"
 [[item]]
   title = "TA'd for [JamCoders](https://jamcoders.org.jm/) 2023"
   date_start = "2023-06-30"
-  description = "This is an phenomenal experience. For anybody interested in teaching CS or algorithms, I strongly recommend applying."
+  description = "This is a phenomenal experience. For anybody interested in teaching CS or algorithms, I strongly recommend applying."
 
 # [[item]]
 #   title = "Presenting \"Reducing Communication in Graph Neural Network Training\" at [SIAM CSE'23](https://www.siam.org/conferences/cm/conference/cse23)"

@@ -1,15 +1,14 @@
 +++
-title = "Reducing Communication in Graph Neural Network Training"
-date = 2023-02-26T15:00:00-03:50
-# hide because old
-draft = true
+title = "Communication-Avoiding Algorithms for Full-Batch and Mini-Batch GNN Training"
+date = 2024-03-21T09:45:00-10:15
+draft = false
 
 # Tags and categories
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
 tags = ["Graph-Representation Learning", "Graph Neural Networks"]
 categories = []
 
-location = "SIAM Conference on Computational Science and Engineering (CSE) 2023"
+location = "NVIDIA GPU Technology Conference (GTC) 2024"
 
 # url_pdf = "https://arxiv.org/pdf/2005.03300.pdf"
 # url_video = "https://www.youtube.com/watch?v=a_iNOoRW-7Q"

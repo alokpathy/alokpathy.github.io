@@ -17,7 +17,7 @@
       
       <guid>/author/admin/</guid>
       <description>Hi, I&amp;rsquo;m Alok! I&amp;rsquo;m a CS Ph.D. student at UC Berkeley, advised by Aydın Buluç and Kathy Yelick. I am affiliated with the PASSION Lab, the BeBOp Group, and Lawrence Berkeley National Lab.
-My research focuses on accelerating machine learning in HPC environments to enable new types of ML. Currently, I am using distributed sparse matrix kernels to scale large GNN models. I am also working on applying GNNs to science problems, such as particle tracking.</description>
+My research focuses on accelerating machine learning in HPC environments to enable new types of ML. Currently, I am using distributed sparse matrix kernels to scale large GNN models. I am also working on applying GNNs to science problems, such as particle track reconstruction and metagenomic binning.</description>
     </item>
     
   </channel>

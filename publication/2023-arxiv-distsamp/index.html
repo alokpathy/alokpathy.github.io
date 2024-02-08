@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Sparse times dense matrix multiplication (SpMM) finds its applications in well-established fields such as computational linear algebra as well as emerging fields such as graph neural networks. In this study, we evaluate the performance of various techniques for performing SpMM as a distributed computation across many nodes by focusing on GPU accelerators. We examine how the actual local computational performance of state-of-the-art SpMM implementations affect computational efficiency as dimensions change when we scale to large numbers of nodes, which proves to be an unexpectedly important bottleneck. We consider various distribution strategies, including A-Stationary, B-Stationary, and C-Stationary algorithms, 1.5D and 2D algorithms, and RDMA-based and bulk synchronous methods of data transfer. Our results show that the best choice of algorithm and implementation technique depends not only on the cost of communication for particular matrix sizes and dimensions, but also on the performance of local SpMM operations. Our evaluations reveal that with the involvement of GPU accelerators, the best design choices for SpMM differ from the conventional algorithms that are known to perform well for dense matrix-matrix or sparse matrix-sparse matrix multiplies.">
+  <meta name="description" content="Graph Neural Networks (GNNs) offer a compact and computationally efficient way to learn embeddings and classifications on graph data. GNN models are frequently large, making distributed minibatch training necessary. The primary contribution of this paper is new methods for reducing communication in the sampling step for distributed GNN training. Here, we propose a matrix-based bulk sampling approach that expresses sampling as a sparse matrix multiplication (SpGEMM) and samples multiple minibatches at once. When the input graph topology does not fit on a single device, our method distributes the graph and use communication-avoiding SpGEMM algorithms to scale GNN minibatch sampling, enabling GNN training on much larger graphs than those that can fit into a single device memory. When the input graph topology (but not the embeddings) fits in the memory of one GPU, our approach (1) performs sampling without communication, (2) amortizes the overheads of sampling a minibatch, and (3) can represent multiple sampling algorithms by simply using different matrix constructions. In addition to new methods for sampling, we show that judiciously replicating feature data with a simple all-to-all exchange can outperform current methods for the feature extraction step in distributed GNN training. We provide experimental results on the largest Open Graph Benchmark (OGB) datasets on 128 GPUs, and show that our pipeline is 2.5× faster Quiver (a distributed extension to PyTorch-Geometric) on a 3-layer GraphSAGE network. On datasets outside of OGB, we show a 8.46× speedup on 128 GPUs in-per epoch time. Finally, we show scaling when the graph is distributed across GPUs and scaling for both node-wise and layer-wise sampling algorithms">
 
   
-  <link rel="alternate" hreflang="en-us" href="/publication/2021-ics-dspmm/">
+  <link rel="alternate" hreflang="en-us" href="/publication/2023-arxiv-distsamp/">
 
   
 
@@ -106,7 +106,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/publication/2021-ics-dspmm/">
+  <link rel="canonical" href="/publication/2023-arxiv-distsamp/">
 
   
   
@@ -118,21 +118,21 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Alok Tripathy">
-  <meta property="og:url" content="/publication/2021-ics-dspmm/">
-  <meta property="og:title" content="Distributed-Memory Parallel Algorithms for Sparse Times Tall-Skinny-Dense Matrix Multiplication | Alok Tripathy">
-  <meta property="og:description" content="Sparse times dense matrix multiplication (SpMM) finds its applications in well-established fields such as computational linear algebra as well as emerging fields such as graph neural networks. In this study, we evaluate the performance of various techniques for performing SpMM as a distributed computation across many nodes by focusing on GPU accelerators. We examine how the actual local computational performance of state-of-the-art SpMM implementations affect computational efficiency as dimensions change when we scale to large numbers of nodes, which proves to be an unexpectedly important bottleneck. We consider various distribution strategies, including A-Stationary, B-Stationary, and C-Stationary algorithms, 1.5D and 2D algorithms, and RDMA-based and bulk synchronous methods of data transfer. Our results show that the best choice of algorithm and implementation technique depends not only on the cost of communication for particular matrix sizes and dimensions, but also on the performance of local SpMM operations. Our evaluations reveal that with the involvement of GPU accelerators, the best design choices for SpMM differ from the conventional algorithms that are known to perform well for dense matrix-matrix or sparse matrix-sparse matrix multiplies."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:url" content="/publication/2023-arxiv-distsamp/">
+  <meta property="og:title" content="Distributed Matrix-Based Sampling for Graph Neural Network Training | Alok Tripathy">
+  <meta property="og:description" content="Graph Neural Networks (GNNs) offer a compact and computationally efficient way to learn embeddings and classifications on graph data. GNN models are frequently large, making distributed minibatch training necessary. The primary contribution of this paper is new methods for reducing communication in the sampling step for distributed GNN training. Here, we propose a matrix-based bulk sampling approach that expresses sampling as a sparse matrix multiplication (SpGEMM) and samples multiple minibatches at once. When the input graph topology does not fit on a single device, our method distributes the graph and use communication-avoiding SpGEMM algorithms to scale GNN minibatch sampling, enabling GNN training on much larger graphs than those that can fit into a single device memory. When the input graph topology (but not the embeddings) fits in the memory of one GPU, our approach (1) performs sampling without communication, (2) amortizes the overheads of sampling a minibatch, and (3) can represent multiple sampling algorithms by simply using different matrix constructions. In addition to new methods for sampling, we show that judiciously replicating feature data with a simple all-to-all exchange can outperform current methods for the feature extraction step in distributed GNN training. We provide experimental results on the largest Open Graph Benchmark (OGB) datasets on 128 GPUs, and show that our pipeline is 2.5× faster Quiver (a distributed extension to PyTorch-Geometric) on a 3-layer GraphSAGE network. On datasets outside of OGB, we show a 8.46× speedup on 128 GPUs in-per epoch time. Finally, we show scaling when the graph is distributed across GPUs and scaling for both node-wise and layer-wise sampling algorithms"><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2021-06-09T14:43:34-04:00">
+  <meta property="article:published_time" content="2023-11-06T14:43:34-04:00">
   
-  <meta property="article:modified_time" content="2021-06-09T14:43:34-04:00">
-  
-
+  <meta property="article:modified_time" content="2023-11-06T14:43:34-04:00">
   
 
   
 
-  <title>Distributed-Memory Parallel Algorithms for Sparse Times Tall-Skinny-Dense Matrix Multiplication | Alok Tripathy</title>
+  
+
+  <title>Distributed Matrix-Based Sampling for Graph Neural Network Training | Alok Tripathy</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -308,7 +308,7 @@
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">Distributed-Memory Parallel Algorithms for Sparse Times Tall-Skinny-Dense Matrix Multiplication</h1>
+  <h1 itemprop="name">Distributed Matrix-Based Sampling for Graph Neural Network Training</h1>
 
   
 
@@ -317,8 +317,8 @@
 
 
 
-<meta content="2021-06-09 14:43:34 -0400 -0400" itemprop="datePublished">
-<meta content="2021-06-09 14:43:34 -0400 -0400" itemprop="dateModified">
+<meta content="2023-11-06 14:43:34 -0400 -0400" itemprop="datePublished">
+<meta content="2023-11-06 14:43:34 -0400 -0400" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -331,27 +331,6 @@
 
 
 
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-      <span itemprop="name">
-        
-
-      
-      
-      <a href="/authors/oguz-selvitopi/">Oguz Selvitopi</a></span></span>, 
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-      <span itemprop="name">
-        
-
-      
-      
-      <a href="/authors/benjamin-brock/">Benjamin Brock</a></span></span>, 
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-      <span itemprop="name">
-        
-
-      
-      
-      <a href="/authors/israt-nisa/">Israt Nisa</a></span></span>, 
   <span itemscope itemprop="author" itemtype="http://schema.org/Person">
       <span itemprop="name">
         
@@ -387,7 +366,7 @@
     
       
     
-    <time>June 2021</time>
+    <time>November 2023</time>
   </span>
   
 
@@ -406,35 +385,35 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Distributed-Memory%20Parallel%20Algorithms%20for%20Sparse%20Times%20Tall-Skinny-Dense%20Matrix%20Multiplication&amp;url=%2fpublication%2f2021-ics-dspmm%2f"
+         href="https://twitter.com/intent/tweet?text=Distributed%20Matrix-Based%20Sampling%20for%20Graph%20Neural%20Network%20Training&amp;url=%2fpublication%2f2023-arxiv-distsamp%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=%2fpublication%2f2021-ics-dspmm%2f"
+         href="https://www.facebook.com/sharer.php?u=%2fpublication%2f2023-arxiv-distsamp%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-facebook-f"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpublication%2f2021-ics-dspmm%2f&amp;title=Distributed-Memory%20Parallel%20Algorithms%20for%20Sparse%20Times%20Tall-Skinny-Dense%20Matrix%20Multiplication"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpublication%2f2023-arxiv-distsamp%2f&amp;title=Distributed%20Matrix-Based%20Sampling%20for%20Graph%20Neural%20Network%20Training"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2fpublication%2f2021-ics-dspmm%2f&amp;title=Distributed-Memory%20Parallel%20Algorithms%20for%20Sparse%20Times%20Tall-Skinny-Dense%20Matrix%20Multiplication"
+         href="http://service.weibo.com/share/share.php?url=%2fpublication%2f2023-arxiv-distsamp%2f&amp;title=Distributed%20Matrix-Based%20Sampling%20for%20Graph%20Neural%20Network%20Training"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Distributed-Memory%20Parallel%20Algorithms%20for%20Sparse%20Times%20Tall-Skinny-Dense%20Matrix%20Multiplication&amp;body=%2fpublication%2f2021-ics-dspmm%2f">
+         href="mailto:?subject=Distributed%20Matrix-Based%20Sampling%20for%20Graph%20Neural%20Network%20Training&amp;body=%2fpublication%2f2023-arxiv-distsamp%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -482,14 +461,14 @@
 
 
 
-<a class="btn btn-outline-primary my-1 mr-1" href="https://dl.acm.org/doi/pdf/10.1145/3447818.3461472" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary my-1 mr-1" href="https://arxiv.org/pdf/2311.02909.pdf" target="_blank" rel="noopener">
   PDF
 </a>
 
 
 
 <button type="button" class="btn btn-outline-primary my-1 mr-1 js-cite-modal"
-        data-filename="/publication/2021-ics-dspmm/cite.bib">
+        data-filename="/publication/2023-arxiv-distsamp/cite.bib">
   Cite
 </button>
 
@@ -519,7 +498,7 @@
 
     
     <h3>Abstract</h3>
-    <p class="pub-abstract" itemprop="text">Sparse times dense matrix multiplication (SpMM) finds its applications in well-established fields such as computational linear algebra as well as emerging fields such as graph neural networks. In this study, we evaluate the performance of various techniques for performing SpMM as a distributed computation across many nodes by focusing on GPU accelerators. We examine how the actual local computational performance of state-of-the-art SpMM implementations affect computational efficiency as dimensions change when we scale to large numbers of nodes, which proves to be an unexpectedly important bottleneck. We consider various distribution strategies, including A-Stationary, B-Stationary, and C-Stationary algorithms, 1.5D and 2D algorithms, and RDMA-based and bulk synchronous methods of data transfer. Our results show that the best choice of algorithm and implementation technique depends not only on the cost of communication for particular matrix sizes and dimensions, but also on the performance of local SpMM operations. Our evaluations reveal that with the involvement of GPU accelerators, the best design choices for SpMM differ from the conventional algorithms that are known to perform well for dense matrix-matrix or sparse matrix-sparse matrix multiplies.</p>
+    <p class="pub-abstract" itemprop="text">Graph Neural Networks (GNNs) offer a compact and computationally efficient way to learn embeddings and classifications on graph data. GNN models are frequently large, making distributed minibatch training necessary. The primary contribution of this paper is new methods for reducing communication in the sampling step for distributed GNN training. Here, we propose a matrix-based bulk sampling approach that expresses sampling as a sparse matrix multiplication (SpGEMM) and samples multiple minibatches at once. When the input graph topology does not fit on a single device, our method distributes the graph and use communication-avoiding SpGEMM algorithms to scale GNN minibatch sampling, enabling GNN training on much larger graphs than those that can fit into a single device memory. When the input graph topology (but not the embeddings) fits in the memory of one GPU, our approach (1) performs sampling without communication, (2) amortizes the overheads of sampling a minibatch, and (3) can represent multiple sampling algorithms by simply using different matrix constructions. In addition to new methods for sampling, we show that judiciously replicating feature data with a simple all-to-all exchange can outperform current methods for the feature extraction step in distributed GNN training. We provide experimental results on the largest Open Graph Benchmark (OGB) datasets on 128 GPUs, and show that our pipeline is 2.5× faster Quiver (a distributed extension to PyTorch-Geometric) on a 3-layer GraphSAGE network. On datasets outside of OGB, we show a 8.46× speedup on 128 GPUs in-per epoch time. Finally, we show scaling when the graph is distributed across GPUs and scaling for both node-wise and layer-wise sampling algorithms</p>
     
 
     
@@ -533,8 +512,8 @@
 
             
             
-            <a href="/publication/#1">
-              Conference paper
+            <a href="/publication/#3">
+              Preprint
             </a>
             
           </div>
@@ -556,7 +535,9 @@
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tags/distributed-matrix-multiplication/">Distributed Matrix Multiplication</a>
+  <a class="badge badge-light" href="/tags/graph-neural-networks/">Graph Neural Networks</a>
+  
+  <a class="badge badge-light" href="/tags/graph-reprsentation-learning/">Graph-Reprsentation Learning</a>
   
 </div>
 

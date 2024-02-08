@@ -1,7 +1,7 @@
 +++
 title = "Communication-Avoiding Algorithms for Full-Batch and Mini-Batch GNN Training"
 date = 2024-03-21T09:45:00-10:15
-draft = true
+draft = false
 
 # Tags and categories
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.

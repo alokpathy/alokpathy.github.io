@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oded Green on Alok Tripathy</title>
+    <link>/authors/oded-green/</link>
+    <description>Recent content in Oded Green on Alok Tripathy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Mar 2021 14:43:34 -0400</lastBuildDate>
+    
+	<atom:link href="/authors/oded-green/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Scalable Hash Table for NUMA Systems</title>
+      <link>/publication/2021-arxiv-mhg/</link>
+      <pubDate>Tue, 09 Mar 2021 14:43:34 -0400</pubDate>
+      
+      <guid>/publication/2021-arxiv-mhg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Accurately and Efficiently Estimating Dynamic Point-to-Point Shortest Path</title>
+      <link>/publication/2020-biggraphs-ppsp/</link>
+      <pubDate>Thu, 05 Nov 2020 10:38:16 -0400</pubDate>
+      
+      <guid>/publication/2020-biggraphs-ppsp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Improving Scheduling for Irregular Applications with Logarithmic Radix Binning</title>
+      <link>/publication/2019-hpec-lrb/</link>
+      <pubDate>Wed, 25 Sep 2019 14:43:34 -0400</pubDate>
+      
+      <guid>/publication/2019-hpec-lrb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scalable K-Core Decomposition for Static Graphs Using a Dynamic Graph Data Structure</title>
+      <link>/publication/2018-bigdata-kcore/</link>
+      <pubDate>Thu, 13 Dec 2018 10:38:16 -0400</pubDate>
+      
+      <guid>/publication/2018-bigdata-kcore/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Logarithmic Radix Binning and Vectorized Triangle Counting</title>
+      <link>/publication/2018-hpec-lrb/</link>
+      <pubDate>Tue, 25 Sep 2018 14:43:34 -0400</pubDate>
+      
+      <guid>/publication/2018-hpec-lrb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scaling Betweenness Centrality in Dynamic Graphs</title>
+      <link>/publication/2018-hpec-sbc/</link>
+      <pubDate>Tue, 25 Sep 2018 14:43:34 -0400</pubDate>
+      
+      <guid>/publication/2018-hpec-sbc/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

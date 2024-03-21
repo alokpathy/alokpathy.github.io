@@ -18,6 +18,11 @@ date_format = "Jan 2006"
 #   Leave other parameters empty if not required.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[item]]
+  title = "\"Distributed Matrix-Based Sampling for Graph Neural Network Training\" accepted to [MLSys 2024](https://mlsys.org/)"
+  date_start = "2024-03-01"
+  description = ""
+
+[[item]]
   title = "Passed Ph.D. Qualifying Exam"
   date_start = "2024-02-05"
   description = ""

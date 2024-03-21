@@ -123,9 +123,9 @@
   <meta property="og:description" content="Graph Neural Networks (GNNs) offer a compact and computationally efficient way to learn embeddings and classifications on graph data. GNN models are frequently large, making distributed minibatch training necessary. The primary contribution of this paper is new methods for reducing communication in the sampling step for distributed GNN training. Here, we propose a matrix-based bulk sampling approach that expresses sampling as a sparse matrix multiplication (SpGEMM) and samples multiple minibatches at once. When the input graph topology does not fit on a single device, our method distributes the graph and use communication-avoiding SpGEMM algorithms to scale GNN minibatch sampling, enabling GNN training on much larger graphs than those that can fit into a single device memory. When the input graph topology (but not the embeddings) fits in the memory of one GPU, our approach (1) performs sampling without communication, (2) amortizes the overheads of sampling a minibatch, and (3) can represent multiple sampling algorithms by simply using different matrix constructions. In addition to new methods for sampling, we show that judiciously replicating feature data with a simple all-to-all exchange can outperform current methods for the feature extraction step in distributed GNN training. We provide experimental results on the largest Open Graph Benchmark (OGB) datasets on 128 GPUs, and show that our pipeline is 2.5× faster Quiver (a distributed extension to PyTorch-Geometric) on a 3-layer GraphSAGE network. On datasets outside of OGB, we show a 8.46× speedup on 128 GPUs in-per epoch time. Finally, we show scaling when the graph is distributed across GPUs and scaling for both node-wise and layer-wise sampling algorithms"><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2023-11-06T14:43:34-04:00">
+  <meta property="article:published_time" content="2023-05-13T14:43:34-04:00">
   
-  <meta property="article:modified_time" content="2023-11-06T14:43:34-04:00">
+  <meta property="article:modified_time" content="2023-05-13T14:43:34-04:00">
   
 
   
@@ -317,8 +317,8 @@
 
 
 
-<meta content="2023-11-06 14:43:34 -0400 -0400" itemprop="datePublished">
-<meta content="2023-11-06 14:43:34 -0400 -0400" itemprop="dateModified">
+<meta content="2023-05-13 14:43:34 -0400 -0400" itemprop="datePublished">
+<meta content="2023-05-13 14:43:34 -0400 -0400" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -366,7 +366,7 @@
     
       
     
-    <time>November 2023</time>
+    <time>May 2023</time>
   </span>
   
 
@@ -512,8 +512,8 @@
 
             
             
-            <a href="/publication/#3">
-              Preprint
+            <a href="/publication/#1">
+              Conference paper
             </a>
             
           </div>
@@ -537,7 +537,7 @@
   
   <a class="badge badge-light" href="/tags/graph-neural-networks/">Graph Neural Networks</a>
   
-  <a class="badge badge-light" href="/tags/graph-reprsentation-learning/">Graph-Reprsentation Learning</a>
+  <a class="badge badge-light" href="/tags/graph-representation-learning/">Graph-Representation Learning</a>
   
 </div>
 

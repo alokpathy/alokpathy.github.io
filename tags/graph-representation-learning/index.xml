@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>Distributed Matrix-Based Sampling for Graph Neural Network Training</title>
+      <link>/publication/2023-arxiv-distsamp/</link>
+      <pubDate>Sat, 13 May 2023 14:43:34 -0400</pubDate>
+      
+      <guid>/publication/2023-arxiv-distsamp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Reducing Communication in Graph Neural Network Training</title>
       <link>/publication/2020-sc-gnn/</link>
       <pubDate>Sat, 09 May 2020 14:43:34 -0400</pubDate>

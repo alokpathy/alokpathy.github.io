@@ -18,6 +18,11 @@ date_format = "Jan 2006"
 #   Leave other parameters empty if not required.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[item]]
+  title = "\"Sparsity-Aware Communication for Distributed Graph Neural Network Training\" accepted to [ICPP 2024](https://icpp2024.org/)"
+  date_start = "2024-06-11"
+  description = "Led by my mentee, Ujjaini Mukhopadhyay"
+
+[[item]]
   title = "\"Distributed Matrix-Based Sampling for Graph Neural Network Training\" accepted to [MLSys 2024](https://mlsys.org/)"
   date_start = "2024-03-01"
   description = ""

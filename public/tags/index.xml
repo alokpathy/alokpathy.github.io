@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Alok Tripathy</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Alok Tripathy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Jun 2021 14:43:34 -0400</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Distributed Matrix Multiplication</title>
+      <link>/tags/distributed-matrix-multiplication/</link>
+      <pubDate>Wed, 09 Jun 2021 14:43:34 -0400</pubDate>
+      
+      <guid>/tags/distributed-matrix-multiplication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GPU Data Structure</title>
+      <link>/tags/gpu-data-structure/</link>
+      <pubDate>Tue, 09 Mar 2021 14:43:34 -0400</pubDate>
+      
+      <guid>/tags/gpu-data-structure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graph Analytics</title>
+      <link>/tags/graph-analytics/</link>
+      <pubDate>Thu, 05 Nov 2020 10:38:16 -0400</pubDate>
+      
+      <guid>/tags/graph-analytics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graph Neural Networks</title>
+      <link>/tags/graph-neural-networks/</link>
+      <pubDate>Thu, 21 Mar 2024 09:45:00 -1015</pubDate>
+      
+      <guid>/tags/graph-neural-networks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graph-Representation Learning</title>
+      <link>/tags/graph-representation-learning/</link>
+      <pubDate>Thu, 21 Mar 2024 09:45:00 -1015</pubDate>
+      
+      <guid>/tags/graph-representation-learning/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

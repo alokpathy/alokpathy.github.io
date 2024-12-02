@@ -6,10 +6,19 @@
     <description>Recent content in Katherine Yelick on Alok Tripathy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 May 2023 14:43:34 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 12 Aug 2024 14:43:34 -0400</lastBuildDate>
     
 	<atom:link href="/authors/katherine-yelick/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sparsity-Aware Communication for Distributed Graph Neural Network Training</title>
+      <link>/publication/2024-icpp-sagnn/</link>
+      <pubDate>Mon, 12 Aug 2024 14:43:34 -0400</pubDate>
+      
+      <guid>/publication/2024-icpp-sagnn/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Distributed Matrix-Based Sampling for Graph Neural Network Training</title>

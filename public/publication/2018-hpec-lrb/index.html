@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Effective scheduling and load balancing of applications on massively multi-threading systems remains challenging despite decades of research, especially for irregular and data dependent problems where the execution control path is unknown until run-time. One of the most widely used loadbalancing schemes used for data dependent problems is a parallel prefix sum (PPS) array over the expected amount of work per task, followed by a partitioning of tasks to threads. While sufficient for many systems, it is not ideal for massively multithreaded systems with SIMD/SIMT execution, such as GPUs.  More fine-grained load-balancing is needed to effectively utilize SIMD/SIMT units. In this paper we introduce Logarithmic Radix Binning (LRB) as a more suitable alternative to parallel prefix summation for load-balancing on such systems. We show that LRB has better scalability than PPS for high thread counts on Intel’s Knight’s Landing processor and comparable scalability on NVIDIA Volta GPUs. On the application side, we show how LRB improves the performance of PageRank up to 1.75X using the branch-avoiding model. We also show how to better load-balance segmented sort and improve performance on the GPU.">
+  <meta name="description" content="Triangle counting is a building block for numerous graph applications and given the fact that graphs continue to grow in size, its scalability is important. As such, numerous algorithms have been designed for triangle counting-some of which are compute-bound rather than memory bound. Even for compute-bound algorithms, one of the key challenges is the limited control flow available on the processor. This is in-part due to the high dependency between the control flow, input data, and limited utilization of vector instructions. Not surprising, compilers are not always able to detect these data dependencies and vectorize the algorithms. Using the branch-avoiding model we show to remove control flow restrictions by replacing branches with an equivalent set of arithmetic operations. More so, we show how these can be vectorized using Intel&#39;s AVX-512 instruction set and that our new vectorized algorithms are 2 × −5× faster than scalar counterparts. We also present a new load balancing method, Logarithmic Radix Binning (LRB) that ensures that threads and the vector data lanes execute a near equal amount of work at any given time. Altogether, our algorithm outperforms several 2017 HPEC Graph Challenge Champions such as the KOKKOS framework and a GPU based algorithm by anywhere from 1.5× and up to 14×.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/publication/2019-hpec-lrb/">
+  <link rel="alternate" hreflang="en-us" href="/publication/2018-hpec-lrb/">
 
   
 
@@ -106,7 +106,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/publication/2019-hpec-lrb/">
+  <link rel="canonical" href="/publication/2018-hpec-lrb/">
 
   
   
@@ -118,21 +118,21 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Alok Tripathy">
-  <meta property="og:url" content="/publication/2019-hpec-lrb/">
-  <meta property="og:title" content="Improving Scheduling for Irregular Applications with Logarithmic Radix Binning | Alok Tripathy">
-  <meta property="og:description" content="Effective scheduling and load balancing of applications on massively multi-threading systems remains challenging despite decades of research, especially for irregular and data dependent problems where the execution control path is unknown until run-time. One of the most widely used loadbalancing schemes used for data dependent problems is a parallel prefix sum (PPS) array over the expected amount of work per task, followed by a partitioning of tasks to threads. While sufficient for many systems, it is not ideal for massively multithreaded systems with SIMD/SIMT execution, such as GPUs.  More fine-grained load-balancing is needed to effectively utilize SIMD/SIMT units. In this paper we introduce Logarithmic Radix Binning (LRB) as a more suitable alternative to parallel prefix summation for load-balancing on such systems. We show that LRB has better scalability than PPS for high thread counts on Intel’s Knight’s Landing processor and comparable scalability on NVIDIA Volta GPUs. On the application side, we show how LRB improves the performance of PageRank up to 1.75X using the branch-avoiding model. We also show how to better load-balance segmented sort and improve performance on the GPU."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:url" content="/publication/2018-hpec-lrb/">
+  <meta property="og:title" content="Logarithmic Radix Binning and Vectorized Triangle Counting | Alok Tripathy">
+  <meta property="og:description" content="Triangle counting is a building block for numerous graph applications and given the fact that graphs continue to grow in size, its scalability is important. As such, numerous algorithms have been designed for triangle counting-some of which are compute-bound rather than memory bound. Even for compute-bound algorithms, one of the key challenges is the limited control flow available on the processor. This is in-part due to the high dependency between the control flow, input data, and limited utilization of vector instructions. Not surprising, compilers are not always able to detect these data dependencies and vectorize the algorithms. Using the branch-avoiding model we show to remove control flow restrictions by replacing branches with an equivalent set of arithmetic operations. More so, we show how these can be vectorized using Intel&#39;s AVX-512 instruction set and that our new vectorized algorithms are 2 × −5× faster than scalar counterparts. We also present a new load balancing method, Logarithmic Radix Binning (LRB) that ensures that threads and the vector data lanes execute a near equal amount of work at any given time. Altogether, our algorithm outperforms several 2017 HPEC Graph Challenge Champions such as the KOKKOS framework and a GPU based algorithm by anywhere from 1.5× and up to 14×."><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-09-25T14:43:34-04:00">
+  <meta property="article:published_time" content="2018-09-25T14:43:34-04:00">
   
-  <meta property="article:modified_time" content="2019-09-25T14:43:34-04:00">
-  
-
+  <meta property="article:modified_time" content="2018-09-25T14:43:34-04:00">
   
 
   
 
-  <title>Improving Scheduling for Irregular Applications with Logarithmic Radix Binning | Alok Tripathy</title>
+  
+
+  <title>Logarithmic Radix Binning and Vectorized Triangle Counting | Alok Tripathy</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -308,7 +308,7 @@
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">Improving Scheduling for Irregular Applications with Logarithmic Radix Binning</h1>
+  <h1 itemprop="name">Logarithmic Radix Binning and Vectorized Triangle Counting</h1>
 
   
 
@@ -317,8 +317,8 @@
 
 
 
-<meta content="2019-09-25 14:43:34 -0400 EDT" itemprop="datePublished">
-<meta content="2019-09-25 14:43:34 -0400 EDT" itemprop="dateModified">
+<meta content="2018-09-25 14:43:34 -0400 -0400" itemprop="datePublished">
+<meta content="2018-09-25 14:43:34 -0400 -0400" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -337,7 +337,21 @@
 
       
       
+      <a href="/authors/oded-green/">Oded Green</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
       <a href="/authors/james-fox/">James Fox</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/alex-watkins/">Alex Watkins</a></span></span>, 
   <span itemscope itemprop="author" itemtype="http://schema.org/Person">
       <span itemprop="name">
         
@@ -351,7 +365,35 @@
 
       
       
-      <a href="/authors/oded-green/">Oded Green</a></span></span>
+      <a href="/authors/kasimir-gabert/">Kasimir Gabert</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/euna-kim/">Euna Kim</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/xiaojing-an/">Xiaojing An</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/kumar-aatish/">Kumar Aatish</a></span></span>, 
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      <a href="/authors/david-a.-bader/">David A. Bader</a></span></span>
   
 
 
@@ -366,7 +408,7 @@
     
       
     
-    <time>September 2019</time>
+    <time>September 2018</time>
   </span>
   
 
@@ -385,35 +427,35 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Improving%20Scheduling%20for%20Irregular%20Applications%20with%20Logarithmic%20Radix%20Binning&amp;url=%2fpublication%2f2019-hpec-lrb%2f"
+         href="https://twitter.com/intent/tweet?text=Logarithmic%20Radix%20Binning%20and%20Vectorized%20Triangle%20Counting&amp;url=%2fpublication%2f2018-hpec-lrb%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=%2fpublication%2f2019-hpec-lrb%2f"
+         href="https://www.facebook.com/sharer.php?u=%2fpublication%2f2018-hpec-lrb%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-facebook-f"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpublication%2f2019-hpec-lrb%2f&amp;title=Improving%20Scheduling%20for%20Irregular%20Applications%20with%20Logarithmic%20Radix%20Binning"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpublication%2f2018-hpec-lrb%2f&amp;title=Logarithmic%20Radix%20Binning%20and%20Vectorized%20Triangle%20Counting"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2fpublication%2f2019-hpec-lrb%2f&amp;title=Improving%20Scheduling%20for%20Irregular%20Applications%20with%20Logarithmic%20Radix%20Binning"
+         href="http://service.weibo.com/share/share.php?url=%2fpublication%2f2018-hpec-lrb%2f&amp;title=Logarithmic%20Radix%20Binning%20and%20Vectorized%20Triangle%20Counting"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Improving%20Scheduling%20for%20Irregular%20Applications%20with%20Logarithmic%20Radix%20Binning&amp;body=%2fpublication%2f2019-hpec-lrb%2f">
+         href="mailto:?subject=Logarithmic%20Radix%20Binning%20and%20Vectorized%20Triangle%20Counting&amp;body=%2fpublication%2f2018-hpec-lrb%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -461,14 +503,14 @@
 
 
 
-<a class="btn btn-outline-primary my-1 mr-1" href="https://www.researchgate.net/profile/Oded_Green/publication/335723059_Improving_Scheduling_for_Irregular_Applications_with_Logarithmic_Radix_Binning/links/5d7799ada6fdcc9961bcd95a/Improving-Scheduling-for-Irregular-Applications-with-Logarithmic-Radix-Binning.pdf" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary my-1 mr-1" href="https://www.researchgate.net/publication/327569911_Logarithmic_Radix_Binning_and_Vectorized_Triangle_Counting?_sg=NwkwZK-isqL5l96mfuPYP3SD9iZuNS5iSY2vdTWwltCgLBzVLyEpl3iAs4gW0-zWeoGb_K0OE-ChLLEhJLrS08jg-D6KYTv7h8aG-oGF.rDK8HkPd78kc0o4rYZ0HhHNpe6oHAJE6V8B1bYyTeG-_gAUg1Coo9FLKKh2ZZY2lmmlvxioE3i043T-xjqhYMw" target="_blank" rel="noopener">
   PDF
 </a>
 
 
 
 <button type="button" class="btn btn-outline-primary my-1 mr-1 js-cite-modal"
-        data-filename="/publication/2019-hpec-lrb/cite.bib">
+        data-filename="/publication/2018-hpec-lrb/cite.bib">
   Cite
 </button>
 
@@ -498,7 +540,7 @@
 
     
     <h3>Abstract</h3>
-    <p class="pub-abstract" itemprop="text">Effective scheduling and load balancing of applications on massively multi-threading systems remains challenging despite decades of research, especially for irregular and data dependent problems where the execution control path is unknown until run-time. One of the most widely used loadbalancing schemes used for data dependent problems is a parallel prefix sum (PPS) array over the expected amount of work per task, followed by a partitioning of tasks to threads. While sufficient for many systems, it is not ideal for massively multithreaded systems with SIMD/SIMT execution, such as GPUs.  More fine-grained load-balancing is needed to effectively utilize SIMD/SIMT units. In this paper we introduce Logarithmic Radix Binning (LRB) as a more suitable alternative to parallel prefix summation for load-balancing on such systems. We show that LRB has better scalability than PPS for high thread counts on Intel’s Knight’s Landing processor and comparable scalability on NVIDIA Volta GPUs. On the application side, we show how LRB improves the performance of PageRank up to 1.75X using the branch-avoiding model. We also show how to better load-balance segmented sort and improve performance on the GPU.</p>
+    <p class="pub-abstract" itemprop="text">Triangle counting is a building block for numerous graph applications and given the fact that graphs continue to grow in size, its scalability is important. As such, numerous algorithms have been designed for triangle counting-some of which are compute-bound rather than memory bound. Even for compute-bound algorithms, one of the key challenges is the limited control flow available on the processor. This is in-part due to the high dependency between the control flow, input data, and limited utilization of vector instructions. Not surprising, compilers are not always able to detect these data dependencies and vectorize the algorithms. Using the branch-avoiding model we show to remove control flow restrictions by replacing branches with an equivalent set of arithmetic operations. More so, we show how these can be vectorized using Intel&rsquo;s AVX-512 instruction set and that our new vectorized algorithms are 2 × −5× faster than scalar counterparts. We also present a new load balancing method, Logarithmic Radix Binning (LRB) that ensures that threads and the vector data lanes execute a near equal amount of work at any given time. Altogether, our algorithm outperforms several 2017 HPEC Graph Challenge Champions such as the KOKKOS framework and a GPU based algorithm by anywhere from 1.5× and up to 14×.</p>
     
 
     

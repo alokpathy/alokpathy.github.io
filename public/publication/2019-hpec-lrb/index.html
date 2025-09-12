@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Sparse times dense matrix multiplication (SpMM) finds its applications in well-established fields such as computational linear algebra as well as emerging fields such as graph neural networks. In this study, we evaluate the performance of various techniques for performing SpMM as a distributed computation across many nodes by focusing on GPU accelerators. We examine how the actual local computational performance of state-of-the-art SpMM implementations affect computational efficiency as dimensions change when we scale to large numbers of nodes, which proves to be an unexpectedly important bottleneck. We consider various distribution strategies, including A-Stationary, B-Stationary, and C-Stationary algorithms, 1.5D and 2D algorithms, and RDMA-based and bulk synchronous methods of data transfer. Our results show that the best choice of algorithm and implementation technique depends not only on the cost of communication for particular matrix sizes and dimensions, but also on the performance of local SpMM operations. Our evaluations reveal that with the involvement of GPU accelerators, the best design choices for SpMM differ from the conventional algorithms that are known to perform well for dense matrix-matrix or sparse matrix-sparse matrix multiplies.">
+  <meta name="description" content="Effective scheduling and load balancing of applications on massively multi-threading systems remains challenging despite decades of research, especially for irregular and data dependent problems where the execution control path is unknown until run-time. One of the most widely used loadbalancing schemes used for data dependent problems is a parallel prefix sum (PPS) array over the expected amount of work per task, followed by a partitioning of tasks to threads. While sufficient for many systems, it is not ideal for massively multithreaded systems with SIMD/SIMT execution, such as GPUs.  More fine-grained load-balancing is needed to effectively utilize SIMD/SIMT units. In this paper we introduce Logarithmic Radix Binning (LRB) as a more suitable alternative to parallel prefix summation for load-balancing on such systems. We show that LRB has better scalability than PPS for high thread counts on Intel’s Knight’s Landing processor and comparable scalability on NVIDIA Volta GPUs. On the application side, we show how LRB improves the performance of PageRank up to 1.75X using the branch-avoiding model. We also show how to better load-balance segmented sort and improve performance on the GPU.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/publication/2021-ics-dspmm/">
+  <link rel="alternate" hreflang="en-us" href="/publication/2019-hpec-lrb/">
 
   
 
@@ -106,7 +106,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/publication/2021-ics-dspmm/">
+  <link rel="canonical" href="/publication/2019-hpec-lrb/">
 
   
   
@@ -118,21 +118,21 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Alok Tripathy">
-  <meta property="og:url" content="/publication/2021-ics-dspmm/">
-  <meta property="og:title" content="Distributed-Memory Parallel Algorithms for Sparse Times Tall-Skinny-Dense Matrix Multiplication | Alok Tripathy">
-  <meta property="og:description" content="Sparse times dense matrix multiplication (SpMM) finds its applications in well-established fields such as computational linear algebra as well as emerging fields such as graph neural networks. In this study, we evaluate the performance of various techniques for performing SpMM as a distributed computation across many nodes by focusing on GPU accelerators. We examine how the actual local computational performance of state-of-the-art SpMM implementations affect computational efficiency as dimensions change when we scale to large numbers of nodes, which proves to be an unexpectedly important bottleneck. We consider various distribution strategies, including A-Stationary, B-Stationary, and C-Stationary algorithms, 1.5D and 2D algorithms, and RDMA-based and bulk synchronous methods of data transfer. Our results show that the best choice of algorithm and implementation technique depends not only on the cost of communication for particular matrix sizes and dimensions, but also on the performance of local SpMM operations. Our evaluations reveal that with the involvement of GPU accelerators, the best design choices for SpMM differ from the conventional algorithms that are known to perform well for dense matrix-matrix or sparse matrix-sparse matrix multiplies."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:url" content="/publication/2019-hpec-lrb/">
+  <meta property="og:title" content="Improving Scheduling for Irregular Applications with Logarithmic Radix Binning | Alok Tripathy">
+  <meta property="og:description" content="Effective scheduling and load balancing of applications on massively multi-threading systems remains challenging despite decades of research, especially for irregular and data dependent problems where the execution control path is unknown until run-time. One of the most widely used loadbalancing schemes used for data dependent problems is a parallel prefix sum (PPS) array over the expected amount of work per task, followed by a partitioning of tasks to threads. While sufficient for many systems, it is not ideal for massively multithreaded systems with SIMD/SIMT execution, such as GPUs.  More fine-grained load-balancing is needed to effectively utilize SIMD/SIMT units. In this paper we introduce Logarithmic Radix Binning (LRB) as a more suitable alternative to parallel prefix summation for load-balancing on such systems. We show that LRB has better scalability than PPS for high thread counts on Intel’s Knight’s Landing processor and comparable scalability on NVIDIA Volta GPUs. On the application side, we show how LRB improves the performance of PageRank up to 1.75X using the branch-avoiding model. We also show how to better load-balance segmented sort and improve performance on the GPU."><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2021-06-09T14:43:34-04:00">
+  <meta property="article:published_time" content="2019-09-25T14:43:34-04:00">
   
-  <meta property="article:modified_time" content="2021-06-09T14:43:34-04:00">
-  
-
+  <meta property="article:modified_time" content="2019-09-25T14:43:34-04:00">
   
 
   
 
-  <title>Distributed-Memory Parallel Algorithms for Sparse Times Tall-Skinny-Dense Matrix Multiplication | Alok Tripathy</title>
+  
+
+  <title>Improving Scheduling for Irregular Applications with Logarithmic Radix Binning | Alok Tripathy</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -308,7 +308,7 @@
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">Distributed-Memory Parallel Algorithms for Sparse Times Tall-Skinny-Dense Matrix Multiplication</h1>
+  <h1 itemprop="name">Improving Scheduling for Irregular Applications with Logarithmic Radix Binning</h1>
 
   
 
@@ -317,8 +317,8 @@
 
 
 
-<meta content="2021-06-09 14:43:34 -0400 EDT" itemprop="datePublished">
-<meta content="2021-06-09 14:43:34 -0400 EDT" itemprop="dateModified">
+<meta content="2019-09-25 14:43:34 -0400 -0400" itemprop="datePublished">
+<meta content="2019-09-25 14:43:34 -0400 -0400" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -337,21 +337,7 @@
 
       
       
-      <a href="/authors/oguz-selvitopi/">Oguz Selvitopi</a></span></span>, 
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-      <span itemprop="name">
-        
-
-      
-      
-      <a href="/authors/benjamin-brock/">Benjamin Brock</a></span></span>, 
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-      <span itemprop="name">
-        
-
-      
-      
-      <a href="/authors/israt-nisa/">Israt Nisa</a></span></span>, 
+      <a href="/authors/james-fox/">James Fox</a></span></span>, 
   <span itemscope itemprop="author" itemtype="http://schema.org/Person">
       <span itemprop="name">
         
@@ -365,14 +351,7 @@
 
       
       
-      <a href="/authors/katherine-yelick/">Katherine Yelick</a></span></span>, 
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-      <span itemprop="name">
-        
-
-      
-      
-      <a href="/authors/ayd%C4%B1n-bulu%C3%A7/">Aydın Buluç</a></span></span>
+      <a href="/authors/oded-green/">Oded Green</a></span></span>
   
 
 
@@ -387,7 +366,7 @@
     
       
     
-    <time>June 2021</time>
+    <time>September 2019</time>
   </span>
   
 
@@ -406,35 +385,35 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Distributed-Memory%20Parallel%20Algorithms%20for%20Sparse%20Times%20Tall-Skinny-Dense%20Matrix%20Multiplication&amp;url=%2fpublication%2f2021-ics-dspmm%2f"
+         href="https://twitter.com/intent/tweet?text=Improving%20Scheduling%20for%20Irregular%20Applications%20with%20Logarithmic%20Radix%20Binning&amp;url=%2fpublication%2f2019-hpec-lrb%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=%2fpublication%2f2021-ics-dspmm%2f"
+         href="https://www.facebook.com/sharer.php?u=%2fpublication%2f2019-hpec-lrb%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-facebook-f"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpublication%2f2021-ics-dspmm%2f&amp;title=Distributed-Memory%20Parallel%20Algorithms%20for%20Sparse%20Times%20Tall-Skinny-Dense%20Matrix%20Multiplication"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpublication%2f2019-hpec-lrb%2f&amp;title=Improving%20Scheduling%20for%20Irregular%20Applications%20with%20Logarithmic%20Radix%20Binning"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2fpublication%2f2021-ics-dspmm%2f&amp;title=Distributed-Memory%20Parallel%20Algorithms%20for%20Sparse%20Times%20Tall-Skinny-Dense%20Matrix%20Multiplication"
+         href="http://service.weibo.com/share/share.php?url=%2fpublication%2f2019-hpec-lrb%2f&amp;title=Improving%20Scheduling%20for%20Irregular%20Applications%20with%20Logarithmic%20Radix%20Binning"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Distributed-Memory%20Parallel%20Algorithms%20for%20Sparse%20Times%20Tall-Skinny-Dense%20Matrix%20Multiplication&amp;body=%2fpublication%2f2021-ics-dspmm%2f">
+         href="mailto:?subject=Improving%20Scheduling%20for%20Irregular%20Applications%20with%20Logarithmic%20Radix%20Binning&amp;body=%2fpublication%2f2019-hpec-lrb%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -482,14 +461,14 @@
 
 
 
-<a class="btn btn-outline-primary my-1 mr-1" href="https://dl.acm.org/doi/pdf/10.1145/3447818.3461472" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary my-1 mr-1" href="https://www.researchgate.net/profile/Oded_Green/publication/335723059_Improving_Scheduling_for_Irregular_Applications_with_Logarithmic_Radix_Binning/links/5d7799ada6fdcc9961bcd95a/Improving-Scheduling-for-Irregular-Applications-with-Logarithmic-Radix-Binning.pdf" target="_blank" rel="noopener">
   PDF
 </a>
 
 
 
 <button type="button" class="btn btn-outline-primary my-1 mr-1 js-cite-modal"
-        data-filename="/publication/2021-ics-dspmm/cite.bib">
+        data-filename="/publication/2019-hpec-lrb/cite.bib">
   Cite
 </button>
 
@@ -519,7 +498,7 @@
 
     
     <h3>Abstract</h3>
-    <p class="pub-abstract" itemprop="text">Sparse times dense matrix multiplication (SpMM) finds its applications in well-established fields such as computational linear algebra as well as emerging fields such as graph neural networks. In this study, we evaluate the performance of various techniques for performing SpMM as a distributed computation across many nodes by focusing on GPU accelerators. We examine how the actual local computational performance of state-of-the-art SpMM implementations affect computational efficiency as dimensions change when we scale to large numbers of nodes, which proves to be an unexpectedly important bottleneck. We consider various distribution strategies, including A-Stationary, B-Stationary, and C-Stationary algorithms, 1.5D and 2D algorithms, and RDMA-based and bulk synchronous methods of data transfer. Our results show that the best choice of algorithm and implementation technique depends not only on the cost of communication for particular matrix sizes and dimensions, but also on the performance of local SpMM operations. Our evaluations reveal that with the involvement of GPU accelerators, the best design choices for SpMM differ from the conventional algorithms that are known to perform well for dense matrix-matrix or sparse matrix-sparse matrix multiplies.</p>
+    <p class="pub-abstract" itemprop="text">Effective scheduling and load balancing of applications on massively multi-threading systems remains challenging despite decades of research, especially for irregular and data dependent problems where the execution control path is unknown until run-time. One of the most widely used loadbalancing schemes used for data dependent problems is a parallel prefix sum (PPS) array over the expected amount of work per task, followed by a partitioning of tasks to threads. While sufficient for many systems, it is not ideal for massively multithreaded systems with SIMD/SIMT execution, such as GPUs.  More fine-grained load-balancing is needed to effectively utilize SIMD/SIMT units. In this paper we introduce Logarithmic Radix Binning (LRB) as a more suitable alternative to parallel prefix summation for load-balancing on such systems. We show that LRB has better scalability than PPS for high thread counts on Intel’s Knight’s Landing processor and comparable scalability on NVIDIA Volta GPUs. On the application side, we show how LRB improves the performance of PageRank up to 1.75X using the branch-avoiding model. We also show how to better load-balance segmented sort and improve performance on the GPU.</p>
     
 
     
@@ -556,7 +535,7 @@
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tags/distributed-matrix-multiplication/">Distributed Matrix Multiplication</a>
+  <a class="badge badge-light" href="/tags/graph-analytics/">Graph Analytics</a>
   
 </div>
 

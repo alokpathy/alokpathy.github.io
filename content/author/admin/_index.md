@@ -9,14 +9,14 @@ authors = ["admin"]
 superuser = true
 
 # Role/position
-role = "CS Ph.D. Student"
+role = "Member of Technical Staff"
 
 # Organizations/Affiliations
 #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-organizations = [ { name = "UC Berkeley", url = "https://www.berkeley.edu/" } ]
+organizations = [ { name = "Essential AI", url = "https://essential.ai/" } ]
 
 # Short bio (displayed in user profile at end of posts)
-bio = "CS Ph.D. student at UC Berkeley interested in high-performance algorithms on heterogeneous systems."
+bio = "Member of Technical Staff at Essential AI"
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email = "alokt@berkeley.edu"
@@ -37,6 +37,7 @@ user_groups = ["Researchers", "Visitors"]
 [[education.courses]]
   course = "Ph.D. in Computer Science"
   institution = "UC Berkeley"
+  year = 2025
 
 [[education.courses]]
   course = "B.S. in Computer Science"
@@ -82,12 +83,6 @@ user_groups = ["Researchers", "Visitors"]
 
 +++
 
-Hi, I'm Alok! I'm a CS Ph.D. student at UC Berkeley, advised by [Aydın Buluç](https://people.eecs.berkeley.edu/~aydin/index.html) and [Kathy Yelick](http://people.eecs.berkeley.edu/~yelick/). I am affiliated with the [PASSION Lab](https://passion.lbl.gov/), the [BeBOp Group](https://bebop.cs.berkeley.edu/), and [Lawrence Berkeley National Lab](https://www.lbl.gov/).
+I'm a Member of Technical Staff at [Essential AI](https://essential.ai/), where we are pushing the capabilities of fully open-source LLMs. 
 
-**I am on the academic and industry job markets in 2024-2025**
-
-My research focuses on accelerating machine learning in HPC environments to enable new types of ML. Currently, I am using distributed sparse matrix kernels to scale large GNN models. I am also working on applying GNNs to science problems, such as particle track reconstruction and metagenomic binning. In the past, I worked on accelerating graph analytics on GPUs. My work has been supported by the [NSF Fellowship](https://www.nsfgrfp.org/).
-
-
-Before coming to Berkeley, I worked with [Oded Green](https://scholar.google.com/citations?user=C_7l2roAAAAJ&hl=en) in [David Bader](https://davidbader.net/)'s HPC lab at Georgia Tech (Go Jackets!).
-
+I recently graduated with a CS Ph.D. from UC Berkeley and Lawrence Berkeley National Lab. My [dissertation](https://www.proquest.com/openview/9ae79d3983177133d1946ba7d213af1d/1?pq-origsite=gscholar&cbl=18750&diss=y) focused on scaling large GNN models and applying them to sciences, particularly [high-energy physics](https://atlas.cern/). I was very thankful to be advised by the wonderful [Aydın Buluç](https://people.eecs.berkeley.edu/~aydin/index.html) and [Kathy Yelick](http://people.eecs.berkeley.edu/~yelick/) during this time. In the past, I worked on accelerating graph analytics on GPUs with [Oded Green](https://scholar.google.com/citations?user=C_7l2roAAAAJ&hl=en) and [David Bader](https://davidbader.net/) at Georgia Tech. My work has been supported by the [NSF Fellowship](https://www.nsfgrfp.org/).

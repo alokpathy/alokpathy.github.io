@@ -16,9 +16,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/author/admin/</guid>
-      <description>Hi, I&amp;rsquo;m Alok! I&amp;rsquo;m a CS Ph.D. student at UC Berkeley, advised by Aydın Buluç and Kathy Yelick. I am affiliated with the PASSION Lab, the BeBOp Group, and Lawrence Berkeley National Lab.
-I am on the academic and industry job markets in 2024-2025
-My research focuses on accelerating machine learning in HPC environments to enable new types of ML. Currently, I am using distributed sparse matrix kernels to scale large GNN models.</description>
+      <description>I&amp;rsquo;m a Member of Technical Staff at Essential AI, where we are pushing the capabilities of fully open-source LLMs.
+I recently graduated with a CS Ph.D. from UC Berkeley and Lawrence Berkeley National Lab. My dissertation focused on scaling large GNN models and applying them to sciences, particularly high-energy physics. I was very thankful to be advised by the wonderful Aydın Buluç and Kathy Yelick during this time. In the past, I worked on accelerating graph analytics on GPUs with Oded Green and David Bader at Georgia Tech.</description>
     </item>
     
   </channel>
